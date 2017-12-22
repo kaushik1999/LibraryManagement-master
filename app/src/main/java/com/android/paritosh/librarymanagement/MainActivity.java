@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         // already logs in the user if the user is logged in...
         // gotta work on the looks now
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TAG", "onAuthStateChanged:signed_out");
         }
     }
+
 
 
     public void logger(View view) {
@@ -73,3 +76,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(phrasesIntent);
     }
 }
+
+
